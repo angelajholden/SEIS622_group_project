@@ -6,6 +6,7 @@ $light-grey: #d9d5c5;
 $darker-red: #d94032;
 $light-red: #d95a4e;
 $black: #222;
+$white: #fff;
 
 :root {
   --light-blue: #8df2e0;
@@ -14,6 +15,7 @@ $black: #222;
   --darker-red: #d94032;
   --light-red: #d95a4e;
   --black: #222;
+  --white: #fff;
 }
 
 html {
@@ -37,6 +39,7 @@ body {
   padding: 0;
 }
 
+// Normalize, browser reset
 article,
 aside,
 details,
@@ -176,6 +179,7 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
+  appearance: button;
   cursor: pointer;
 }
 
@@ -207,6 +211,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-appearance: textfield;
+  appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -246,4 +251,18 @@ th {
   padding: 0;
 }
 
-//  ALL GLOBAL STYLES BELOW THIS LINE POINT
+//  ALL GLOBAL STYLES BELOW THIS LINE
+.access-hidden {
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+}
+
+.paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+}
