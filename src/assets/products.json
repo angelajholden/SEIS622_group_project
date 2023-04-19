@@ -1,6 +1,6 @@
 [
     {
-        "id":1,
+        "id":"carrot-cake",
         "productName":"Carrot Cake",
         "image": "carrot-cake.jpg",
         "alt": "Slice of Carrot Cake",
@@ -10,6 +10,7 @@
             "Slice",
             "12-inch cake"
         ],
+        "cost":[7.00, 56.00],
             "gluten": true,
             "soy": true,
             "nuts": true,
@@ -23,7 +24,7 @@
             "sugar":46
     },
     {
-        "id":2,
+        "id":"cheesecake",
         "productName":"Cheesecake",
         "image": "cheesecake.jpg",
         "alt": "Slice of Cheesecake",
@@ -33,6 +34,7 @@
             "Slice",
             "12-inch cake"
         ],
+        "cost":[6.00, 36.00],
             "gluten": true,
             "soy": true,
             "nuts": false,
@@ -46,7 +48,7 @@
             "sugar":31
     },
     {
-        "id":3,
+        "id":"cinamon-coffee-cake-muffin",
         "productName":"Cinnamon Coffee Cake Muffins",
         "image": "filename.jpg",
         "alt": "image alt text",
@@ -56,6 +58,7 @@
             "Individual Muffin",
             "Dozen Muffins"
         ],
+        "cost":[4.75, 57.00],
             "gluten": true,
             "soy": true,
             "nuts": false,
@@ -69,7 +72,7 @@
             "sugar":21
     },
     {
-        "id":4,
+        "id":"pumpkin-apple-handpies",
         "productName":"Pumpkin & Apple Handpies",
         "image": "pumpkin-apple-handpie.jpg",
         "alt": "Pumpkin and Apple Handpies",
@@ -79,6 +82,7 @@
             "Individual Handpie",
             "Dozen Handpies"
         ],
+        "cost":[3.50, 42.00],
             "gluten": true,
             "soy": false,
             "nuts": false,
@@ -92,7 +96,7 @@
             "sugar":17
     },
     {
-        "id":5,
+        "id":"oatmeal-raisin-cookies",
         "productName":"Oatmeal Raisin Cookies",
         "image": "oatmeal-raisin-cookie.jpg",
         "alt": "Pile of Oatmeal Raisin Cookies",
@@ -102,6 +106,7 @@
             "Individual Cookie",
             "Dozen Cookies"
         ],
+        "cost":[2.75, 30.00],
             "gluten": true,
             "soy": false,
             "nuts": false,
@@ -115,7 +120,7 @@
             "sugar":17
     },
     {
-        "id":6,
+        "id":"chocolate-chip-cookies",
         "productName":"Chocolate Chip Cookies",
         "image": "chocolate-chip-cookies.jpg",
         "alt": "Stack of Chocolate Chip Cookies",
@@ -125,6 +130,7 @@
             "Individual Cookie",
             "Dozen Cookies"
         ],
+        "cost":[2.75, 30.00],
             "gluten": true,
             "soy": false,
             "nuts": false,
@@ -138,7 +144,7 @@
             "sugar":12
     },
     {
-        "id":7,
+        "id":"blueberry-muffins",
         "productName":"Blueberry Muffins",
         "image": "blueberry-muffin.jpg",
         "alt": "Blueberry muffin surrounded by fresh blueberries",
@@ -148,6 +154,7 @@
             "Individual Muffin",
             "Dozen Muffins"
         ],
+        "cost":[4.75, 57.00],
             "gluten": true,
             "soy": false,
             "nuts": false,
@@ -161,7 +168,7 @@
             "sugar":20
     },
     {
-        "id":8,
+        "id":"pecan-pie",
         "productName":"Pecan Pie",
         "image": "pecan-pie.jpg",
         "alt": "Pecan Pie slice",
@@ -171,6 +178,7 @@
             "Slice",
             "12-inch Pie"
         ],
+        "cost":[5.00, 16.00],
             "gluten": true,
             "soy": true,
             "nuts": true,
@@ -184,16 +192,18 @@
             "sugar":65
     },
     {
-        "id":9,
+        "id":"assorted-macarons",
         "productName":"Assorted Macarons",
         "image": "macarons.jpg",
         "alt": "Stack of macarons.",
         "productSummary": "Daily Special! Each day we create a unique flavored macaron.",
         "productLongDescription": "Daily Special! Each day we create a unique flavored macaron. Delicate almond pastry sandwich with crisp exterior. Available individually or in packs of five.",
         "servingOptions":[
-            "Individual Cookie",
-            "Dozen Cookies"
+            "Individual",
+            "Half-Dozen Assorment",
+            "Dozen Assortment"
         ],
+        "cost":[3.75, 22.00, 36.00],
             "gluten": false,
             "soy": false,
             "nuts": true,
@@ -207,7 +217,7 @@
             "sugar":8
     },
     {
-        "id":10,
+        "id":"brownie",
         "productName":"Brownie",
         "image": "brownie.jpg",
         "alt": "Stack of brownies",
@@ -217,6 +227,7 @@
             "Individual Brownie",
             "Dozen Brownies"
         ],
+        "cost":[3.50, 38.00],
             "gluten": true,
             "soy": false,
             "nuts": false,
@@ -230,7 +241,7 @@
             "sugar": 8
     },
     {
-        "id":11,
+        "id":"croissant",
         "productName":"Croissant",
         "image": "croissant.jpg",
         "alt": "Tray of Croissants",
@@ -238,8 +249,9 @@
         "productLongDescription": "Perfect, buttery, flakey croissants. Made with Kerry Gold Butter. Available indiviually or by the 1/2 dozen.",
         "servingOptions":[
             "Individual Croissant",
-            "1/2 Dozen Croissant"
+            "Dozen Croissant"
         ],
+        "cost":[3.50, 42.00],
             "gluten": true,
             "soy": false,
             "nuts": false,
@@ -253,16 +265,17 @@
             "sugar": 6
     },
     {
-        "id":12,
+        "id":"chocolate-croissant",
         "productName":"Chocolate Croissant",
         "image": "chocolate-croissant.jpg",
         "alt": "Pile of Chocolate Croissant",
         "productSummary": "Enjoy our delightful flakey croissant filled with chocolate.",
         "productLongDescription": "Perfect, buttery, flakey croissants. Made with Kerry Gold Butter and filled with Guiradelli chocolate. Available indiviually or by the dozen.",
         "servingOptions":[
-            "Individual Cookie",
-            "Dozen Cookies"
+            "Individual Croissant",
+            "Dozen Croissant"
         ],
+        "cost":[4.25, 51.00],
             "gluten": true,
             "soy": true,
             "nuts": false,

@@ -2,7 +2,9 @@
 <app-search></app-search>
 
 <main class="main">
-    <app-products></app-products>
+    <section class="product-container">
+        <app-products class="product-item" *ngFor="let item of products" [product]="item"></app-products>
+    </section>
 </main>
 
 <app-footer></app-footer>
