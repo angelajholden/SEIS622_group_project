@@ -1,4 +1,5 @@
-    <article >
+<section class="product-container">
+    <article class="product-item" *ngFor="let product of products">
         <figure class="product-thumb">
             <img src="assets/images/{{product.image}}" alt="{{product.alt}}">
         </figure>
@@ -6,3 +7,4 @@
         <p class="paragraph">{{product.productSummary}}</p>
         <p>${{product.cost[0]}} per {{product.servingOptions[0]}}</p>
     </article>
+</section>
