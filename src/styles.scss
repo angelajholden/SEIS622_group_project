@@ -263,8 +263,13 @@ th {
   clip: rect(0, 0, 0, 0);
 }
 
-.paragraph {
+.paragraph,
+p {
   font-size: 1rem;
   font-weight: 400;
   margin: 0 0 1rem;
+
+  &:last-of-type {
+    margin: 0;
+  }
 }
