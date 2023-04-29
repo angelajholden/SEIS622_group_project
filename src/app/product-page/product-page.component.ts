@@ -8,13 +8,15 @@ import { Component } from '@angular/core';
 export class ProductPageComponent {
   constructor() {}
 
-  counter = 0;
+  counter = 1;
 
   increment() {
     this.counter++;
   }
 
   decrement() {
-    this.counter--;
+    if (this.counter >= 2) {
+      this.counter--;
+    }
   }
 }

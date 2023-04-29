@@ -1,18 +1,20 @@
 <section class="product_page">
-    <figure class="product_image">
-        <img src="https://picsum.photos/1024/768" alt="placeholder">
-    </figure>
-    <article class="product_sidebar">
-        <h1 class="product_title">Baked Item</h1>
-        <p class="prodcut_desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus maiores voluptas quos atque dolor laboriosam voluptatem cumque laborum unde! Reprehenderit natus inventore perferendis laboriosam perspiciatis sint totam! Ad, dolor praesentium?
-        </p>
-        <div class="product_price">$14.99 USD</div>
-        <div class="product_count">
-            <button class="product_count-btn" (click)="decrement()">-</button>{{counter}}<button class="product_count-btn" (click)="increment()">+</button>
-        </div>
-        <button class="product_add-cart">Add To Cart</button>
-    </article>
+    <div class="product_container">
+        <figure class="product_image">
+            <img src="https://picsum.photos/1024/768" alt="placeholder">
+        </figure>
+        <article class="product_sidebar">
+            <h1 class="product_title">Lemon and Blueberry Muffins</h1>
+            <p class="prodcut_desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus maiores voluptas quos atque dolor laboriosam voluptatem cumque laborum unde! Reprehenderit natus inventore perferendis laboriosam perspiciatis sint totam! Ad, dolor praesentium?
+            </p>
+            <div class="product_price">$14.99 USD</div>
+            <div class="product_count">
+                <button class="product_count-btn" (click)="decrement()">-</button>{{counter}}<button class="product_count-btn" (click)="increment()">+</button>
+            </div>
+            <button class="product_add-cart">Add To Cart</button>
+        </article>
+    </div>
     <aside class="product_nutrition">
         <table class="product_table">
             <thead>
