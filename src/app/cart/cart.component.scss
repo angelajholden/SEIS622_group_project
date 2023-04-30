@@ -1,0 +1,15 @@
+.shop_cart {
+  position: fixed;
+  top: 0;
+  right: -450px;
+  width: 450px;
+  height: 100vh;
+  background: var(--light-gray);
+  box-shadow: -2px 0 1px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  transition: right 300ms ease;
+
+  &.active {
+    right: 0;
+  }
+}
