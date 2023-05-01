@@ -1,14 +1,12 @@
 <section class="product_page">
     <div class="product_container">
         <figure class="product_image">
-            <img src="https://picsum.photos/1024/768" alt="placeholder">
+            <img src="assets/images/{{currentProduct.image}}" alt="{{currentProduct.productName}}">
         </figure>
         <article class="product_sidebar">
-            <h1 class="product_title">Lemon and Blueberry Muffins</h1>
-            <p class="prodcut_desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus maiores voluptas quos atque dolor laboriosam voluptatem cumque laborum unde! Reprehenderit natus inventore perferendis laboriosam perspiciatis sint totam! Ad, dolor praesentium?
-            </p>
-            <div class="product_price">$14.99 USD</div>
+            <h1 class="product_title">{{currentProduct.productName}}</h1>
+            <p class="prodcut_desc">{{currentProduct.productLongDescription}}</p>
+            <div class="product_price">{{currentProduct.cost[0] | currency}}</div>
             <div class="product_count">
                 <button class="product_count-btn" (click)="decrement()">&ndash;</button>{{counter}}<button class="product_count-btn" (click)="increment()">&plus;</button>
             </div>
@@ -16,64 +14,32 @@
         </article>
     </div>
     <aside class="product_nutrition">
+        <h2>Allergens</h2>
+        <img *ngIf="currentProduct.gluten==true" src="assets/svgs/gluten.svg" alt="Gluten Allergy" height="100px" width="100px">
+        <img *ngIf="currentProduct.soy==true" src="assets/svgs/soy.svg" alt="Soy Allergy" height="100px" width="100px">
+        <img *ngIf="currentProduct.nuts==true" src="assets/svgs/tree-nuts.svg" alt="Tree Nuts Allergy" height="100px" width="100px">
+        <img *ngIf="currentProduct.peanuts==true" src="assets/svgs/peanuts.svg" alt="Peaunut Allergy" height="100px" width="100px">
+        <img *ngIf="currentProduct.eggs==true" src="assets/svgs/egg.svg" alt="Eggs Allergy" height="100px" width="100px">
+        <img *ngIf="currentProduct.dairy==true" src="assets/svgs/milk.svg" alt="Dairy Allergy" height="100px" width="100px">
         <table class="product_table">
             <thead>
                 <tr>
-                    <th scope="col">Nutrition &amp; Alergens</th>
-                    <th scope="col">Cal</th>
+                    <th scope="col">Nutrition</th>
+                    <th scope="col">Calories</th>
                     <th scope="col">Fat</th>
-                    <th scope="col">Pro</th>
-                    <th scope="col">Carb</th>
-                    <th scope="col">Eggs</th>
-                    <th scope="col">Milk</th>
-                    <th scope="col">Soy</th>
-                    <th scope="col">Gluten</th>
+                    <th scope="col">Protein</th>
+                    <th scope="col">Carbohydrates</th>
+                    <th scope="col">Sugar</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th scope="row">Slice</th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <th scope="row">1/2 Dozen</th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <th scope="row">1 Dozen</th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <th scope="row">Baker's Dozen</th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{currentProduct.calories}}</td>
+                    <td>{{currentProduct.fat}}</td>
+                    <td>{{currentProduct.protein}}</td>
+                    <td>{{currentProduct.carb}}</td>
+                    <td>{{currentProduct.sugar}}</td>
                 </tr>
             </tbody>
         </table>

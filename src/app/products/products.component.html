@@ -6,7 +6,7 @@
         <div class="product_desc">
             <h2 class="product-title">{{product.productName}}</h2>
             <p class="paragraph">{{product.productSummary}}</p>
-            <p class="product-cost">${{product.cost[0]}} per {{product.servingOptions[0]}}</p>
+            <p class="product-cost">{{product.cost[0] | currency}} per {{product.servingOptions[0]}}</p>
         </div>
     </article>
 </section>
