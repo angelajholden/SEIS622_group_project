@@ -28,7 +28,22 @@
 }
 
 .icon-container {
+  position: relative;
   width: auto;
+
+  .cart_count {
+    position: absolute;
+    top: -5px;
+    left: 25px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    line-height: 20px;
+    color: var(--black);
+    text-align: center;
+    border-radius: 50%;
+  }
 }
 
 .cart-icon,

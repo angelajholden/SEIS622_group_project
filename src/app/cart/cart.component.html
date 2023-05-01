@@ -1,5 +1,8 @@
-<section [class.active]="isActive == true" class="shop_cart">
-    <div class="shop_cart-wrap">
-        <p>this is the shopping cart</p>
+<section class="shop_cart active">
+    <div class="shop_cart-wrap" *ngFor="let item of items; let i = index">
+        <h2>{{item.productName}}</h2>
+        <p>{{item.cost[0] | currency}}</p>
+        <img src="/assets/images/{{item.image}}" alt="" width="100" />
+        <button (click)="removeItem(i)">Remove Item</button>
     </div>
 </section>

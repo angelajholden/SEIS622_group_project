@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  currentlyActive = false;
+  currentlyActive = true;
+
+  constructor(private cartService: CartService) {}
+
+  itemCount() {
+    return this.cartService.getItems().length;
+  }
 }
