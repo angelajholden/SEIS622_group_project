@@ -47,10 +47,19 @@
     object-fit: cover;
     object-position: center center;
   }
+
+  @media (max-width: 960px) {
+    width: 100%;
+    padding-bottom: 56.25%;
+  }
 }
 
 .product_sidebar {
   width: 35%;
+
+  @media (max-width: 960px) {
+    width: 100%;
+  }
 }
 
 .product_title {
@@ -60,6 +69,10 @@
   margin: 0.5rem 0 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--light-blue);
+
+  @media (max-width: 960px) {
+    font-size: 2.5rem;
+  }
 }
 
 .product_price {
@@ -109,6 +122,29 @@
   }
 }
 
+.allergen_icons {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+
+  img {
+    display: block;
+    width: 100px;
+    margin: 0 5px;
+  }
+
+  @media (max-width: 600px) {
+    justify-content: space-evenly;
+
+    img {
+      width: 19.5%;
+      margin: 0;
+    }
+  }
+}
+
 .product_nutrition {
   width: 100%;
   margin-top: 2rem;
@@ -118,28 +154,68 @@
     border-collapse: collapse;
     border: 1px solid var(--light-gray);
 
-    tr,
     th,
     td {
       padding: 5px;
       border: 1px solid var(--light-gray);
+
+      @media (max-width: 768px) {
+        display: block;
+
+        &::before {
+          content: attr(data-label) ": ";
+          display: inline;
+        }
+      }
     }
 
-    th[scope="col"] {
-      background-color: var(--dusky-blue);
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-      color: var(--white);
+    thead {
+      th[scope="col"] {
+        background-color: var(--dusky-blue);
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        color: var(--white);
+      }
+
+      @media (max-width: 768px) {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        clip: rect(0 0 0 0);
+      }
     }
 
     th[scope="row"] {
       text-align: left;
       font-weight: 400;
+      background-color: transparent;
+
+      @media (max-width: 768px) {
+        background-color: var(--dusky-blue);
+        border-color: var(--dusky-blue);
+        font-weight: 700;
+        color: var(--white);
+
+        &::before {
+          content: attr(data-label) " Per ";
+          display: inline;
+        }
+      }
     }
 
     td {
       text-align: center;
-      width: 10%;
+      width: 15%;
+
+      @media (max-width: 768px) {
+        text-align: left;
+        width: 100%;
+
+        &:nth-of-type(even) {
+          background-color: var(--light-gray);
+        }
+      }
     }
   }
 }
