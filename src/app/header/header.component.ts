@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   currentlyActive = false;
+
+  constructor(private cartService: CartService) {}
+
+  itemCount() {
+    return this.cartService.getItems().length;
+  }
+
+  updateActive() {
+    this.currentlyActive = !this.currentlyActive;
+  }
 }
