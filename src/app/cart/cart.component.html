@@ -1,4 +1,4 @@
-<section class="shop_cart active">
+<section class="shop_cart" [ngClass]="isActive ? 'active' : ''">
     <div class="shop_cart-wrap">
         <h2 class="cart_header">Shopping Cart</h2>
         <p *ngIf="!items[0]">Add something to you cart!</p>

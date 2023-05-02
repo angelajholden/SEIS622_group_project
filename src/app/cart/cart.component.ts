@@ -9,8 +9,6 @@ import { CartService } from '../cart.service';
 export class CartComponent {
   @Input() isActive = false;
 
-  // public isActive = false;
-
   public counter: number = 1;
 
   items = this.cartService.getItems();

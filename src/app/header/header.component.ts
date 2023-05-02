@@ -7,11 +7,15 @@ import { CartService } from '../cart.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  currentlyActive = true;
+  currentlyActive = false;
 
   constructor(private cartService: CartService) {}
 
   itemCount() {
     return this.cartService.getItems().length;
+  }
+
+  updateActive() {
+    this.currentlyActive = !this.currentlyActive;
   }
 }
