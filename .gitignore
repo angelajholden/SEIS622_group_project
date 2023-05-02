@@ -1,7 +1,5 @@
 .DS_STORE
 
-./images
-
 /dist/
 /bazel-out
 /integration/bazel/bazel-*
