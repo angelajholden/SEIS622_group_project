@@ -46,7 +46,17 @@
   }
 }
 
-.cart-icon,
+.cart-icon{
+  border: none;
+  background: none;
+
+  svg {
+    display: block;
+    width: 30px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
 .search-icon {
   border: none;
   background: none;
