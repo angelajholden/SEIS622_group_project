@@ -11,6 +11,8 @@ export class CartComponent {
 
   // public isActive = false;
 
+  public counter: number = 1;
+
   items = this.cartService.getItems();
 
   removeItem(index: number) {
@@ -21,5 +23,15 @@ export class CartComponent {
 
   public checkActive() {
     this.isActive = !this.isActive;
+  }
+
+  increment() {
+    this.counter++;
+  }
+
+  decrement() {
+    if (this.counter >= 2) {
+      this.counter--;
+    }
   }
 }
