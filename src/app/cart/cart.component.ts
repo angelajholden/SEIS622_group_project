@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CartService } from '../cart.service';
 
 @Component({
@@ -7,13 +7,9 @@ import { CartService } from '../cart.service';
   styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent {
-  @Input() isActive: boolean;
-
-  @Output() changeActiveEvent = new EventEmitter<boolean>();
+  @Input() isActive = false;
 
   public counter: number = 1;
-
-  constructor(private cartService: CartService) {}
 
   items = this.cartService.getItems();
 
@@ -21,8 +17,10 @@ export class CartComponent {
     this.cartService.removeItem(index);
   }
 
-  changeActive() {
-    this.changeActiveEvent.emit();
+  constructor(private cartService: CartService) {}
+
+  public checkActive() {
+    this.isActive = !this.isActive;
   }
 
   increment() {
