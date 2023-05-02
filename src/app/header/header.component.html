@@ -13,7 +13,7 @@
             </button>
             <div class = "dropdown">
                 <datalist id="suggestions" name="list" accesskey="target">
-                    <option><a href="https://www.spoonforkbacon.com/carrot-cake-with-cream-cheese-frosting/">Carrot Cake</a><option>
+                    <option id="carrot-cake">Carrot Cake<option>
                     <option>Cheesecake</option>
                     <option>Cinnamon Coffee Cake Muffins</option>
                     <option>Pumpkin & Apple Handpies</option>
@@ -26,8 +26,14 @@
                     <option>Croissant</option>
                     <option>Chocolate Croissant</option>
                 </datalist>
+                <!-- <select ng-model="selectedProduct">
+                    <option ng-repeat="x in products" *ng-value="{{x}}">{{x.productName}}</option>
+                </select> -->
                 <input autoComplete="on" list="suggestions" placeholder="Search for your treat!"> 
               </div>
+            <!-- <button [routerLink]="['/product', selectedProduct.id]">
+                Enter
+            </button> -->
         </div>
     </div>
 </header>
