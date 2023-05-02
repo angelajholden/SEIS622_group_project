@@ -8,11 +8,11 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  
 })
 export class HeaderComponent {
   public products: any[] = data;
-  currentlyActive = false;
+
+  currentlyActive: boolean = false;
 
   constructor(private cartService: CartService) {}
 
