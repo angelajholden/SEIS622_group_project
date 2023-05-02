@@ -1,5 +1,8 @@
 <section class="shop_cart" [class.active]="isActive">
-    <button (click)="changeActive()">Close</button>
+    <button class="cart_close" (click)="changeActive()">
+        <span class="access-hidden">Close Cart</span>
+        <span class="cart_icon">&times;</span>
+    </button>
     <div class="shop_cart-wrap">
         <h2 class="cart_header">Shopping Cart</h2>
         <p *ngIf="!items[0]">Add something to you cart!</p>
@@ -21,5 +24,15 @@
                 </div>
             </div>
         </article>
+        <div *ngIf="items[0]" class="cart_order-pickup">
+            <div class="date_picker">
+                <label for="mat-input-0">Select a pickup date.</label>
+                <input matInput [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </div>
+            <button class="cart_add-cart">Checkout</button>
+        </div>
     </div>
 </section>
