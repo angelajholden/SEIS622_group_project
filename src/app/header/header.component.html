@@ -1,4 +1,4 @@
-<app-cart [isActive]="currentlyActive"></app-cart>
+<app-cart [isActive]="currentlyActive" (changeActiveEvent)="updateActive()"></app-cart>
 <app-search></app-search>
 <header class="header">
     <div class="header-container">

@@ -7,7 +7,7 @@ import { CartService } from '../cart.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  currentlyActive = false;
+  currentlyActive: boolean = false;
 
   constructor(private cartService: CartService) {}
 
