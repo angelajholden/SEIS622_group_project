@@ -13,5 +13,6 @@ export class ProductsComponent {
 
   onSearchTextEntered(searchValue:string){
       this.searchText = searchValue;
+      console.log(searchValue);
   }
 }
