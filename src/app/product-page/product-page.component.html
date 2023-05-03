@@ -36,12 +36,12 @@
             </thead>
             <tbody>
                 <tr>
-                    <th data-label="Nutrition" scope="row">Slice</th>
-                    <td data-label="Calories">{{currentProduct.calories}}</td>
-                    <td data-label="Fat">{{currentProduct.fat}}</td>
-                    <td data-label="Protein">{{currentProduct.protein}}</td>
-                    <td data-label="Carbohydrates">{{currentProduct.carb}}</td>
-                    <td data-label="Sugar">{{currentProduct.sugar}}</td>
+                    <th data-label="Nutrition" scope="row">{{currentProduct.servingOptions[0]}}</th>
+                    <td data-label="Calories">{{currentProduct.calories}} kCal</td>
+                    <td data-label="Fat">{{currentProduct.fat}} g</td>
+                    <td data-label="Protein">{{currentProduct.protein}} g</td>
+                    <td data-label="Carbohydrates">{{currentProduct.carb}} g</td>
+                    <td data-label="Sugar">{{currentProduct.sugar}} g</td>
                 </tr>
             </tbody>
         </table>
