@@ -14,8 +14,9 @@ export class CartService {
   addToCart(product: IProduct, num:number) {
     this.items.push(product);
     this.quantity.push(num);
-    this.total += product.cost[0]*num;
+    this.total = this.getTotal();
   }
+
   getTotal(){
     this.total = 0;
     for(let i = 0; i < this.items.length; i++)
@@ -31,6 +32,10 @@ export class CartService {
 
   getQuantity(){
     return this.quantity;
+  }
+
+  setQuantity(quant:number, index:number){
+    this.quantity[index] = quant;
   }
 
   removeItem(index: number) {
