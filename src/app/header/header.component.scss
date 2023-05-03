@@ -27,6 +27,33 @@
   }
 }
 
+.dropdown-container {
+  position: relative;
+  width: 33.333%;
+
+  select {
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    background-color: var(--white);
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    appearance: none;
+    border: 0;
+    background-color: var(--dusky-blue);
+    width: 58.5px;
+    height: 58.5px;
+    font-size: 1.25rem;
+    color: var(--white);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
 .icon-container {
   position: relative;
   width: auto;
@@ -46,7 +73,7 @@
   }
 }
 
-.cart-icon{
+.cart-icon {
   border: none;
   background: none;
 

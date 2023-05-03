@@ -1,4 +1,4 @@
 <div class="search-container">
-    <span>Search:</span>
-    <input type="text" [(ngModel)]="enteredSearchValue" (input)="onSearchTextChanged()">
+    <label class="access-hidden" for="filter">Filter:</label>
+    <input id="filter" type="text" placeholder="Filter your treats..." [(ngModel)]="enteredSearchValue" (input)="onSearchTextChanged()">
 </div>

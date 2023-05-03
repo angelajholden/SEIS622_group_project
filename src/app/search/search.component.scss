@@ -1,0 +1,12 @@
+.search-container {
+  max-width: 50rem;
+  margin: 0 auto 25px;
+  padding: 25px 0;
+  border-bottom: 2px dotted var(--light-red);
+
+  input {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid var(--dusky-blue);
+  }
+}
