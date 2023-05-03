@@ -10,6 +10,11 @@
 
 #textbox {
   display: flex;
+  max-width: 75rem;
+  position:center;
+  margin: 0 auto;
+  padding: 25px;
+  flex-flow: row wrap;
 }
 .left {
   flex: 1;

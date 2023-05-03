@@ -10,6 +10,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { CartComponent } from './cart/cart.component';
 import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,13 @@ import { FormsModule } from '@angular/forms';
     SearchComponent,
     ProductsComponent,
     ProductPageComponent,
-    CartComponent
+    CartComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
