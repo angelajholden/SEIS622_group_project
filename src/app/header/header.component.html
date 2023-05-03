@@ -12,7 +12,13 @@
             </button>
         </div>
         <div class="icon-container">
-            <app-search></app-search>
+            <div class="dropdown">
+                <select [(ngModel)] = "selectedProduct" (change)="changeProduct($event)">
+                    <option selected disabled [value]="">Select a treat!</option>
+                    <option *ngFor = "let product of products" [value]="product.id">{{product.productName}}</option>
+                </select>
+            </div>
+            <button (click)="goToPage()">Go!</button>
         </div>
     </div>
 </header>

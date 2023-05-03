@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CartService } from '../cart.service';
 
 @Component({
@@ -16,22 +16,26 @@ export class CartComponent {
   constructor(private cartService: CartService) {}
 
   items = this.cartService.getItems();
+  public quantity = this.cartService.getQuantity();
+  total:number = this.cartService.getTotal();
 
   removeItem(index: number) {
     this.cartService.removeItem(index);
+    this.total = this.cartService.getTotal();
   }
 
   changeActive() {
     this.changeActiveEvent.emit();
   }
 
-  increment() {
-    this.counter++;
+  increment(i:number) {
+    this.quantity[i]++;
+//    this.counter++;
   }
 
-  decrement() {
-    if (this.counter >= 2) {
-      this.counter--;
+  decrement(i:number) {
+    if (this.quantity[i] >= 2) {
+      this.quantity[i]--;
     }
   }
 }

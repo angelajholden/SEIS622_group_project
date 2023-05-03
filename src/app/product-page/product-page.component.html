@@ -10,7 +10,7 @@
             <div class="product_count">
                 <button class="product_count-btn" (click)="decrement()">&ndash;</button>{{counter}}<button class="product_count-btn" (click)="increment()">&plus;</button>
             </div>
-            <button (click)="addToCart(currentProduct)" class="product_add-cart">Add To Cart</button>
+            <button (click)="addToCart(currentProduct, counter)" class="product_add-cart">Add To Cart</button>
         </article>
     </div>
     <aside class="product_nutrition">

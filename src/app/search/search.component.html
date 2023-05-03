@@ -1,42 +1,4 @@
-            <!-- <div class="dropdown">
-                <datalist id="suggestions" name="list" accesskey="target">
-                    <option><a href="https://www.spoonforkbacon.com/carrot-cake-with-cream-cheese-frosting/">Carrot Cake</a>
-                    <option>
-                    <option>Cheesecake</option>
-                    <option>Cinnamon Coffee Cake Muffins</option>
-                    <option>Pumpkin & Apple Handpies</option>
-                    <option>Oatmeal Raisin Cookies</option>
-                    <option>Chocolate Chip Cookies</option>
-                    <option>Blueberry Muffins</option>
-                    <option>Pecan Pie</option>
-                    <option>Assorted Macarons</option>
-                    <option>Brownie</option>
-                    <option>Croissant</option>
-                    <option>Chocolate Croissant</option>
-                </datalist>
-                <input autoComplete="on" list="suggestions" placeholder="Search for your treat!">
-            </div> -->
-            <div class="dropdown">
-                <select [(ngModel)] = "selectedProduct" (change)="changeProduct($event)">
-                    <option disabled selected value="">Select a treat!</option>
-                    <option *ngFor = "let product of products" [value]="product.id">{{product.productName}}</option>
-                </select>
-            </div>
-            <button (click)="goToPage()">Go!</button>
-            
-            <!-- <div class="content" role="main">
-                <div class="card">
-                <div class="form-group">
-                    <label for="search-text">Search Text</label>
-                    <input type="text" class="form-control" id="search-text" aria-describedby="search-text" 
-                    [(ngModel)]="searchText" placeholder="Enter text to search" 
-                    autofocus>
-                </div>
-                <ul class="list-group list-group-flush">
-                     results of ngFor is passed to appFilter with argument searchText
-                    <li class="list-group-item" *ngFor="let c of products | search: searchText">
-                    {{c}}
-                    </li>
-                </ul>
-                </div>
-            </div> -->
+<div class="search-container">
+    <span>Search:</span>
+    <input type="text" [(ngModel)]="enteredSearchValue" (input)="onSearchTextChanged()">
+</div>

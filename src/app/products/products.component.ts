@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter } from '@angular/core';
 import data from 'src/assets/products.json';
 
 @Component({
@@ -7,6 +7,11 @@ import data from 'src/assets/products.json';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent {
-  // @Input() public product:any;
   public products: any[] = data;
+  
+  searchText:string = "";
+
+  onSearchTextEntered(searchValue:string){
+      this.searchText = searchValue;
+  }
 }

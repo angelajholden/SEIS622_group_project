@@ -12,10 +12,10 @@
             </figure>
             <div class="cart_text">
                 <h3 class="cart_title">{{item.productName}}</h3>
-                <p>{{(item.cost[0] * counter) | currency}}</p>
+                <p>{{(item.cost[0] * quantity[i]) | currency}}</p>
                 <div class="count_container">
                     <div class="product_count">
-                        <button class="product_count-btn" (click)="decrement()">&ndash;</button>{{counter}}<button class="product_count-btn" (click)="increment()">&plus;</button>
+                        <button class="product_count-btn" (click)="decrement(i)">&ndash;</button>{{quantity[i]}}<button class="product_count-btn" (click)="increment(i)">&plus;</button>
                     </div>
                     <button (click)="removeItem(i)" class="remove_icon">
                         <span class="access-hidden">Remove Item</span>
@@ -32,6 +32,7 @@
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </div>
+            <div>{{total | currency}}</div>
             <button class="cart_add-cart">Checkout</button>
         </div>
     </div>

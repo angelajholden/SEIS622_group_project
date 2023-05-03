@@ -36,8 +36,8 @@ export class ProductPageComponent implements OnInit {
     }
   }
 
-  addToCart(product: IProduct) {
-    this.cartService.addToCart(product);
+  addToCart(product: IProduct, quantity:number) {
+    this.cartService.addToCart(product, quantity);
   }
 
   increment() {

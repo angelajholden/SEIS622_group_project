@@ -18,7 +18,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,7 @@ import { SearchPipe } from './search.pipe';
     ProductsComponent,
     ProductPageComponent,
     CartComponent,
-    SearchPipe
+  
   ],
   imports: [
     BrowserModule,
