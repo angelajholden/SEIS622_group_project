@@ -17,7 +17,7 @@ export class CartComponent {
 
   items = this.cartService.getItems();
   public quantity = this.cartService.getQuantity();
-  total:number = this.cartService.getTotal();
+  total: number = this.cartService.getTotal();
 
   removeItem(index: number) {
     this.cartService.removeItem(index);
@@ -28,12 +28,11 @@ export class CartComponent {
     this.changeActiveEvent.emit();
   }
 
-  increment(i:number) {
+  increment(i: number) {
     this.quantity[i]++;
-//    this.counter++;
   }
 
-  decrement(i:number) {
+  decrement(i: number) {
     if (this.quantity[i] >= 2) {
       this.quantity[i]--;
     }

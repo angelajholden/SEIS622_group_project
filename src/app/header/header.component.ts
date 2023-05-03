@@ -1,9 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { CartService } from '../cart.service';
 import data from 'src/assets/products.json';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { RouterModule, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,12 +9,10 @@ import { RouterModule, Router } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  
   selectedProduct: any;
-  selectedId:string;
-  searchText = "";
+  selectedId: string;
+  searchText = '';
   public products: any[] = data;
-  test = ["cat", "dog", "pig"];
   currentlyActive: boolean = false;
 
   constructor(private cartService: CartService, private router: Router) {}
@@ -29,12 +25,11 @@ export class HeaderComponent {
     this.currentlyActive = !this.currentlyActive;
   }
 
-  goToPage(){
+  goToPage() {
     this.router.navigate(['product/', this.selectedId]);
-    // [routerLink]="['/product', selectedProduct.id]"
   }
 
-  changeProduct(e:any){
+  changeProduct(e: any) {
     this.selectedId = e.target.value;
     console.log(e.target.value);
   }
