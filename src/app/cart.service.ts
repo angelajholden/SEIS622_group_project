@@ -15,6 +15,7 @@ export class CartService {
     this.items.push(product);
     this.quantity.push(num);
     this.total = this.getTotal();
+    //console.log(this.total);
   }
 
   getTotal(){
