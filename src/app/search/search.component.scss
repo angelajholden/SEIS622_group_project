@@ -18,4 +18,15 @@
     width: 30px;
     height: 30px;
   }
+
+  @media (max-width: 768px) {
+    input {
+      padding: 10px;
+    }
+
+    svg {
+      top: 5px;
+      right: 5px;
+    }
+  }
 }
