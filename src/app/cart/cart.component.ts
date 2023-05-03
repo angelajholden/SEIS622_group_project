@@ -26,7 +26,7 @@ export class CartComponent {
 
   changeActive() {
     this.changeActiveEvent.emit();
-    this.total = this.cartService.getTotal();
+    this.total = this.cartService.getTotal()
   }
 
   increment(i: number) {
