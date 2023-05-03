@@ -1,7 +1,7 @@
 <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
 <section class="product-container">
     <ng-container *ngFor="let product of products">
-        <article *ngIf="searchText === '' || product.productName.toLowerCase().includes(searchText)" [routerLink]="['/product', product.id]" class="product-item">
+        <article *ngIf="searchText === '' || product.productName.toLowerCase().includes(searchText) || product.productName.includes(searchText)" [routerLink]="['/product', product.id]" class="product-item">
             <figure class="product-thumb">
                 <img src="assets/images/{{product.image}}" alt="{{product.alt}}">
             </figure>
