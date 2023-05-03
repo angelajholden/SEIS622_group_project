@@ -26,15 +26,20 @@ export class CartComponent {
 
   changeActive() {
     this.changeActiveEvent.emit();
+    this.total = this.cartService.getTotal();
   }
 
   increment(i: number) {
     this.quantity[i]++;
+    this.cartService.setQuantity(this.quantity[i], i);
+    this.total = this.cartService.getTotal();
   }
 
   decrement(i: number) {
     if (this.quantity[i] >= 2) {
       this.quantity[i]--;
+      this.cartService.setQuantity(this.quantity[i], i);
+      this.total = this.cartService.getTotal();
     }
   }
 }

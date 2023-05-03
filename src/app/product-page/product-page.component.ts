@@ -38,6 +38,7 @@ export class ProductPageComponent implements OnInit {
 
   addToCart(product: IProduct, quantity:number) {
     this.cartService.addToCart(product, quantity);
+//    this.cartService.updateTotal();
   }
 
   increment() {
